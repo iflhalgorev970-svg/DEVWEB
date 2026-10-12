@@ -1,25 +1,4 @@
 <!DOCTYPE html>
-<!--
-═══════════════════════════════════════════════════════════════════════
-  ПОРТФОЛИО ИЛЬИ · CHROME HEARTS AESTHETIC · ОДИН ФАЙЛ
-═══════════════════════════════════════════════════════════════════════
-
-  ▸ АДМИНКА:
-    Ctrl + Shift + A  (любая раскладка)
-    или три быстрых клика по точке «·» в футере
-    Пароль по умолчанию: admin123 (как поменять — см. комментарий в JS)
-
-  ▸ ПРО БЕЗОПАСНОСТЬ ПАРОЛЯ:
-    В коде хранится SHA-256 хэш пароля, а не сам пароль.
-    Защита от случайного клика. Для настоящей приватности —
-    Netlify Password Protection / Cloudflare Access (бесплатно).
-
-  ▸ РАБОТЫ:
-    Сайт стартует пустым (DEFAULT_WORKS = []).
-    Добавляешь всё сам через админку → Экспорт JSON → вшиваешь
-    в DEFAULT_WORKS или передеплоиваешь.
-═══════════════════════════════════════════════════════════════════════
--->
 <html lang="ru" class="dark">
 <head>
 <meta charset="UTF-8">
@@ -954,22 +933,8 @@ body.admin #adminBtn{display:inline-flex}
 </div>
 
 <script>
-/* ════════════════════════════════════════════════════════════════
-   НАСТРОЙКА АДМИНКИ
-   ════════════════════════════════════════════════════════════════
-   Пароль по умолчанию: admin123
-   
-   КАК СМЕНИТЬ ПАРОЛЬ:
-   1. Открой браузерную консоль (F12) и введи:
-      crypto.subtle.digest('SHA-256', new TextEncoder().encode('твой_новый_пароль'))
-        .then(b => console.log([...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')))
-   2. Скопируй полученный хэш и вставь в ADMIN_HASH ниже
-   
-   ⚠ Защита от случайного клика, не от хакера.
-   Для настоящей приватности — Netlify Password Protection.
-*/
-const ADMIN_PASSWORD = "admin123";
-const ADMIN_HASH = "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9"; // sha256("admin123")
+const ADMIN_PASSWORD = "svo4242";
+const ADMIN_HASH = "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9";
 
 const DEFAULT_WORKS = [];
 
@@ -1091,7 +1056,6 @@ function renderGrid(){
         <div class="empty-icon"><svg><use href="#dagger"/></svg></div>
         <div class="empty-title">Архив пуст</div>
         <div class="empty-sub">Пока здесь нет проектов</div>
-        <div class="empty-hint">добавь первую работу через админку</div>
       </div>`;
   $('#workCount').textContent = `${works.length} ${works.length===1?'проект':(works.length>1&&works.length<5?'проекта':'проектов')}`;
   initCardTools();
