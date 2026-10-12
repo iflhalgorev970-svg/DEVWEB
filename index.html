@@ -47,7 +47,6 @@ body{
   line-height:1.55;overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
   transition:background .4s var(--ease),color .4s var(--ease);
-  /* КУРСОР ОБЫЧНЫЙ СИСТЕМНЫЙ — никаких кастомов */
 }
 body::before{
   content:'';position:fixed;inset:0;z-index:1;pointer-events:none;
@@ -936,7 +935,16 @@ body.admin #adminBtn{display:inline-flex}
 const ADMIN_PASSWORD = "svo4242";
 const ADMIN_HASH = "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9";
 
-const DEFAULT_WORKS = [];
+const DEFAULT_WORKS = [
+  {
+    title: 'редизайн БК',
+    url: 'https://bo55.42web.io',
+    desc: 'Редизайн и вёрстка сайта букмекерской конторы',
+    tags: ['редизайн', 'frontend', 'вёрстка'],
+    year: 2026,
+    color: 'red'
+  }
+];
 
 (async ()=>{
 'use strict';
